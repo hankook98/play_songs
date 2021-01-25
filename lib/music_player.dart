@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_audio_query/flutter_audio_query.dart';
 import 'package:just_audio/just_audio.dart';
 
+// ignore: must_be_immutable
 class play_songs extends StatefulWidget {
   SongInfo songInfo;
   Function changeTrack;
@@ -60,8 +61,6 @@ class MusicPlayerState extends State<play_songs> {
   }
 
   Widget build(context) {
-    var arrow_back_ios_sharp;
-    var arrow_back_ios_sharp;
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.white,leading: IconButton(onPressed: ()  {
         Navigator.of(context).pop();
