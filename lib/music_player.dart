@@ -64,7 +64,7 @@ class MusicPlayerState extends State<play_songs> {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.white,leading: IconButton(onPressed: ()  {
         Navigator.of(context).pop();
-      },icon: Icon(Icons.arrow_back_ios_sharp,color: Colors.black)),title: Text('Now Playing', style: TextStyle(color: Colors.black)),),
+      },icon: Icon(Icons.arrow_back_ios,color: Colors.black)),title: Text('Now Playing', style: TextStyle(color: Colors.black)),),
       body: Container(
         margin: EdgeInsets.fromLTRB(5, 57, 5, 0),
         child: Column(children:<Widget>[
@@ -85,7 +85,7 @@ class MusicPlayerState extends State<play_songs> {
             GestureDetector(child: Icon(Icons.skip_previous, color: Colors.black, size: 55), behavior: HitTestBehavior.translucent,onTap: () {
               widget.changeTrack(false);
             },),
-            GestureDetector(child: Icon(isPlaying?Icons.pause_circle_filled_rounded:Icons.play_circle_fill_rounded, color: Colors.black, size: 85), behavior: HitTestBehavior.translucent,onTap: () {
+            GestureDetector(child: Icon(isPlaying?Icons.pause_circle_filled:Icons.play_circle_filled, color: Colors.black, size: 85), behavior: HitTestBehavior.translucent,onTap: () {
               changeStatus();
             },),
             GestureDetector(child: Icon(Icons.skip_next, color: Colors.black, size: 55), behavior: HitTestBehavior.translucent,onTap: () {
